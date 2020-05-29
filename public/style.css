@@ -1,0 +1,343 @@
+* {
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+/* Container */
+.container {
+   width: 70%;
+   display: block;
+   margin: 20px auto 10px;
+   max-width: 600px;
+   /* padding-top: -50px; */
+   padding-bottom: 10px;
+}
+
+/* Time Card box */
+
+.timeCard {
+   
+}
+
+
+/* Member name */
+.member__name {
+   text-align: right;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   position: relative;
+}
+
+.member__name-title {
+   margin: 5px 20px;
+   padding: 0;
+   font-weight: 300;
+}
+
+.member__name-text {
+padding: 5px 5px 0;
+font-size: 1.5rem;
+width: 150px;
+font-weight: 600;
+border: none;
+margin-bottom: 5px;
+overflow: hidden;
+outline: none;
+}
+
+.member__name::after {
+   content: '';
+   width: 110px;
+   height: 2px;
+   background: darkblue;
+   position: absolute;
+   top: 30px;
+   right: 40px;
+   z-index: 9999;
+}
+
+/* Date */
+.timeCard {
+   padding-right: 5px;
+   padding-left: 5px;
+   position: relative;
+}
+
+.timeCard__date {
+   border: 1px solid black;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.timeCard__date-title {
+   margin: 0;
+   padding: 5px 15px;
+   font-size: 1.2rem;
+   font-weight: 300;
+}
+
+.timeCard__date-box {
+   display: flex;
+   margin-right: 10px;
+}
+
+.timeCard__date-detail {
+   margin: 0 10px;
+   padding: 0;
+   line-height: 2rem;
+}
+
+.date__input-cell {
+   font-size: 1.1rem;
+   font-weight: 500;
+   border: none;
+   outline: none;
+}
+
+
+/*  Card header */
+
+.cardHeader {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   flex-wrap: nowrap;
+   
+}
+
+.cardHeader__title {
+   display: grid;
+   grid-template-columns: 1fr 3fr 3fr;
+}  
+
+.cardHeader__item {
+   font-size: 1.2rem;
+   padding: 5px 0;
+   font-weight: 400;
+}
+
+/* Card Input */
+
+.cardInput {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.firstCardInput,
+.secondCardInput {
+   display: grid;
+   grid-auto-flow: column;
+   grid-template-rows: repeat(16, 1fr);
+   grid-template-columns: 1fr 3fr 3fr;
+}
+
+.alignItem {
+   text-align: center;
+   border: 1px solid black;
+   font-size: 1.1rem;
+   padding: 3px 0;
+}
+
+.cardInput__cell-input {
+   width: 100%;
+   text-align: center;
+   font-size: 1.1rem;
+   font-weight: 500;
+   outline: none;
+   border: none;
+}
+
+.cardInput-weekend {
+   display: block;
+   border: 2px solid red;
+   height: 100%;
+   width: 80%;
+   border-radius: 50%;
+   margin: auto;
+}
+
+
+/* Create button */
+
+.create-btn {
+   display: iblock;
+   margin: 30px auto;
+   text-align: center;
+   
+}
+
+.btn {
+   padding: 5px 25px;
+   font-size: 1.2rem;
+   background-color: rgb(27, 100, 168);
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   outline: none;
+   box-shadow: 0 0 5px #777171;
+}
+
+/*  Modal  */
+
+.modal {
+   width: 33%;
+   height: 18%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: rgba(96, 125, 139, 0.9);
+   border-radius: 5px;
+   display: none;
+}
+
+.modal__text {
+   text-align: center;
+}
+
+.modal__title {
+   color: rgb(250, 251, 253);
+}
+
+.modal__name-text {
+   height: 18%;
+}
+
+.modal__name-text h4 {
+   margin-bottom: 10px;
+   padding: 0 10px;
+}
+
+@media (max-width: 420px) {
+   .container {
+      width: 100%;
+      margin-bottom: ;
+   }
+   .cardInput-weekend {
+      width: 100%;
+   }
+   .create-btn {
+      margin-top: 15px;
+   }
+}
+
+@media (max-width: 360px) {
+   .cardHeader__daysNum-title {
+      padding: 3px 2px 3px 3px;
+   }
+}
+
+@media (max-width: 375px) {
+   .cardHeader__daysNum-title {
+      padding: 3px 2px 3px 3px;
+   }
+}
+
+@media (max-height: 730px) {
+   .cardInput__item {
+      font-size: 1rem;
+      padding: 1px 2px 1px 3px;
+   }
+   .cardHeader__daysNum-title {
+      padding: 3px 4px 3px 4px;
+   }
+   .cardInput__span {
+      width: 110%;
+   }
+}
+
+@media (max-height: 568px) {
+   .member__name-title {
+      font-size: 1rem;
+      margin-bottom: 3 px;
+      margin-right: 5px;
+   }
+   .member__name-text {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      width: 100px;
+   }
+   .member__name::after {
+      content: '';
+      width: 77px;
+      height: 2px;
+      background: darkblue;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      z-index: 9999;
+   }
+   .container {
+      margin-top: 10px;
+      margin-bottom: 5px;
+   }
+   .cardInput__item,
+   .cardInput__cell-input,
+   .cardHeader__item {
+      font-size: 1rem;
+      padding: 2px 2px 2px 3px;
+   }
+   .cardHeader__item {
+       padding: 2px 4px 2px 3px;
+   }
+   .cardInput__item {
+      padding: 1px;
+   }
+   .create-btn {
+      margin-top: 0;
+   }
+}
+
+@media (max-height: 480px) {
+   .member__name-title {
+      font-size: 1rem;
+      margin-bottom: 3 px;
+      margin-right: 5px;
+   }
+   .member__name-text {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      width: 100px;
+   }
+   .member__name::after {
+      content: '';
+      width: 77px;
+      height: 2px;
+      background: darkblue;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      z-index: 9999;
+   }
+   .container {
+      margin-top: 5px;
+      margin-bottom: 0;
+      padding-bottom: 5px;
+   }
+   .cardInput__item,
+   .cardInput__cell-input,
+   .cardHeader__item {
+      font-size: 0.9rem;
+   }
+   .cardHeader__item {
+       padding: 2px 2px 2px 3px;
+   }
+   .cardInput__item {
+      padding: 0;
+   }
+   .create-btn {
+      margin-top: 0;
+   }
+   .timeCard__date-detail {
+      font-size: 0.9rem;
+      padding: 0;
+   }
+   .timeCard__date {
+      padding: 0;
+   }
+   .btn {
+      padding: 3px 15px;
+      font-size: 1rem;
+
+   }
+}
